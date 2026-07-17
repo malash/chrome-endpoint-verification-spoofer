@@ -1,5 +1,9 @@
 # chrome-endpoint-verification-spoofer
 
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/a0adcb20-2cb8-4800-a29f-6be001bb6587" alt="logo">
+</p>
+
 [English](./README.md) | [中文](./README.zh-CN.md)
 
 一个用于为 Chrome 伪造上报设备信息的项目——尤其针对 **Endpoint Verification** 插件。在被注入的进程里伪造:

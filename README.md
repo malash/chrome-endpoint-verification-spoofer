@@ -1,5 +1,9 @@
 # chrome-endpoint-verification-spoofer
 
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/a0adcb20-2cb8-4800-a29f-6be001bb6587" alt="logo">
+</p>
+
 [English](./README.md) | [中文](./README.zh-CN.md)
 
 A macOS project for spoofing the device info Chrome reports — in particular for the
