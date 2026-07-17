@@ -12,9 +12,19 @@
 > **⚠️ 由 AI 辅助编写，请谨慎使用。**
 > 本项目完全通过 AI 辅助的"氛围编程"构建，未经审计。实现中可能存在难以察觉的 bug 或从未被考虑到的边界情况。请仔细审查，风险自负。
 
-## 用法
+## 准备
 
-需要目标机器**已关闭 SIP**。
+在目标机器上:
+
+1. **关闭 SIP。**
+2. **关闭库验证（library validation）**，这样 `DYLD_INSERT_LIBRARIES` 才能注入到启用了
+   macOS 库验证的二进制中（如 Chrome）:
+
+   ```bash
+   sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true
+   ```
+
+## 用法
 
 ```bash
 make                              # 编译 build/spoof + build/spoof-lib.dylib

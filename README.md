@@ -14,9 +14,19 @@ A macOS project for spoofing the device info Chrome reports — in particular fo
 > coding and has not been audited. The implementation may contain subtle bugs or edge cases that
 > were never considered. Review carefully and use at your own risk.
 
-## Usage
+## Prepare
 
-Requires **SIP disabled** on the target machine.
+On the target machine:
+
+1. **Disable SIP.**
+2. **Disable library validation** so `DYLD_INSERT_LIBRARIES` can inject into a binary
+   with macOS library validation (like Chrome):
+
+   ```bash
+   sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true
+   ```
+
+## Usage
 
 ```bash
 make                              # build build/spoof + build/spoof-lib.dylib
