@@ -31,8 +31,8 @@
 ## 用法
 
 ```bash
-make                              # 编译 build/spoof + build/spoof-lib.dylib
-cp spoof.conf.example spoof.conf  # 然后编辑值（或运行 scripts/latest-macos.sh）
+make
+cp spoof.conf.example spoof.conf
 build/spoof "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ```
 
@@ -47,7 +47,7 @@ build/spoof "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ```
 serial=C02XXXXXXXXX
 os_version=26.5.2
-os_version_string=Version 26.5.2 (Build 25F84)   # 可选;省略则自动生成
+os_version_string=Version 26.5.2 (Build 25F84)
 ```
 
 - 每次启动时读取——改完重启即可,无需重新编译。
@@ -67,10 +67,10 @@ os_version_string=Version 26.5.2 (Build 25F84)   # 可选;省略则自动生成
 ## 伪造为最新 macOS 版本
 
 ```bash
-scripts/latest-macos.sh   # 打印并写入 spoof.conf
+scripts/latest-macos.sh
 ```
 
-它查询 Apple 的 gdmf 源（`gdmf.apple.com/v2/pmv`）——除 `curl` + `plutil` 外无依赖。
+该命令会将 `spoof.conf` 更新为最新的 macOS 版本。
 
 ## 测试
 

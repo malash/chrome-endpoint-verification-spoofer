@@ -33,8 +33,8 @@ On the target machine:
 ## Usage
 
 ```bash
-make                              # build build/spoof + build/spoof-lib.dylib
-cp spoof.conf.example spoof.conf  # then edit the values (or run scripts/latest-macos.sh)
+make
+cp spoof.conf.example spoof.conf
 build/spoof "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ```
 
@@ -49,7 +49,7 @@ Verify with `chrome://version` (the "OS" line).
 ```
 serial=C02XXXXXXXXX
 os_version=26.5.2
-os_version_string=Version 26.5.2 (Build 25F84)   # optional; derived if omitted
+os_version_string=Version 26.5.2 (Build 25F84)
 ```
 
 - Read at each launch — edit and relaunch, no rebuild.
@@ -71,10 +71,10 @@ os_version_string=Version 26.5.2 (Build 25F84)   # optional; derived if omitted
 ## Spoof the latest macOS version
 
 ```bash
-scripts/latest-macos.sh   # prints it and writes it into spoof.conf
+scripts/latest-macos.sh
 ```
 
-It queries Apple's gdmf feed (`gdmf.apple.com/v2/pmv`) — no deps beyond `curl` + `plutil`.
+This command updates `spoof.conf` to the latest macOS version.
 
 ## Test
 
